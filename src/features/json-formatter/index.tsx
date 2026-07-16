@@ -6,9 +6,17 @@ import ToolSection from "@/components/tool/ToolSection";
 
 import JsonEditor from "./components/JsonEditor";
 import { useJsonFormatter } from "./hooks/useJsonFormatter";
+import JsonToolbar from "./components/JsonToolbar";
+
 
 export default function JsonFormatterPage() {
-  const { json, updateJson } = useJsonFormatter();
+  const {
+    json,
+    updateJson,
+    validation,
+    formatJsonInput,
+    minify,
+} = useJsonFormatter();
 
   return (
     <ToolLayout>
@@ -24,15 +32,27 @@ export default function JsonFormatterPage() {
         />
       </ToolSection>
 
-      <ToolSection title="Actions">
-        Toolbar coming next...
-      </ToolSection>
+     <ToolSection title="Actions">
+    <JsonToolbar onFormat={formatJsonInput} onMinify={minify} />
+</ToolSection>
 
-      <ToolSection title="Status">
-        <p className="text-sm text-muted-foreground">
-          Characters: {json.length}
-        </p>
-      </ToolSection>
+     <ToolSection title="Status">
+  <div className="space-y-2">
+    <p
+      className={`font-medium ${
+        validation.isValid ? "text-green-600" : "text-red-600"
+      }`}
+    >
+      {validation.isValid ? "✅ Valid JSON" : "❌ Invalid JSON"}
+    </p>
+
+    {!validation.isValid && validation.error && (
+      <p className="text-sm text-muted-foreground">
+        {validation.error}
+      </p>
+    )}
+  </div>
+</ToolSection>
     </ToolLayout>
   );
 }

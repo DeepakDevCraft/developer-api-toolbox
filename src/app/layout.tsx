@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import MainLayout from "@/components/layout/MainLayout";
 import { siteConfig } from "@/constants/site";
-import ThemeProvider from "@/components/providers/ThemeProvider";
+import {ThemeProvider} from "@/components/providers/ThemeProvider";
 
 import "./globals.css";
 
@@ -30,7 +30,7 @@ export default function RootLayout({
   children,
 }: Readonly<RootLayoutProps>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="...">
   <ThemeProvider>
     <MainLayout>{children}</MainLayout>
