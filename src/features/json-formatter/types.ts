@@ -8,3 +8,4 @@ export interface JsonOperationResult {
   output: string;
   error?: string;
 }
+
