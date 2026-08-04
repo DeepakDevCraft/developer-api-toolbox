@@ -1,6 +1,6 @@
 // navigation.ts
 import {
- Home,Binary
+ Home
 } from "lucide-react";
 import { tools } from "./tools";
 
@@ -10,10 +10,5 @@ export const navigation = [
     href: "/",
     icon: Home,
   },
-  {
-  title: "Base64 Encoder",
-  href: "/tools/base64",
-  icon: Binary,
-},
   ...tools,
 ];
