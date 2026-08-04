@@ -4,6 +4,8 @@ import {
   Clock3,
   FileJson,
   KeyRound,
+  Link,
+  Fingerprint
 } from "lucide-react";
 
 import type { Tool } from "@/types/tool";
@@ -32,7 +34,7 @@ export const tools: Tool[] = [
     title: "UUID Generator",
     description: "Generate RFC-compliant UUID v4 values.",
     href: "/tools/uuid-generator",
-    icon: Braces,
+    icon: Fingerprint,
     category: "Utilities",
     featured: true,
   },
@@ -54,4 +56,13 @@ export const tools: Tool[] = [
     category: "Date & Time",
     featured: true,
   },
+  {
+  id: "url-encoder",
+  title: "URL Encoder / Decoder",
+  description: "Encode and decode URLs for safe transmission over the web.",
+  href: "/tools/url-encoder",
+  icon: Link,
+  category: "Encoding",
+  featured: true,
+},
 ];
