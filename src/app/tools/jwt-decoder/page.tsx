@@ -1,3 +1,5 @@
+import JwtDecoderPage from "@/features/jwt-decoder";
+
 export default function Page() {
-  return <h1>Coming Soon</h1>;
+  return <JwtDecoderPage />;
 }
