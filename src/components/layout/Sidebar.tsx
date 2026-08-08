@@ -10,7 +10,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="hidden w-64 shrink-0 border-r bg-background md:block">
+    <aside className="hidden w-72 shrink-0 border-r bg-background md:block">
       <div className="h-full p-4">
         <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
           Navigation
@@ -18,7 +18,7 @@ export default function Sidebar() {
 
         <nav
           aria-label="Main Navigation"
-          className="space-y-1"
+          className="space-y-2"
         >
           {navigation.map((item) => {
             const Icon = item.icon;
@@ -29,13 +29,13 @@ export default function Sidebar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                  "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-all duration-200",
                   isActive
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-primary text-primary-foreground shadow-sm"
                     : "text-muted-foreground hover:bg-muted hover:text-foreground"
                 )}
               >
-                <Icon className="h-4 w-4" />
+                <Icon className="h-5 w-5 shrink-0" />
 
                 <span>{item.title}</span>
               </Link>

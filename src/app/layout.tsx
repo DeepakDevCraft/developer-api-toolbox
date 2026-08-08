@@ -18,8 +18,55 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://example.com"),
+
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+
+  description:
+    "Free online developer tools including JSON Formatter, JWT Decoder, Base64 Encoder, URL Encoder, UUID Generator, and Unix Timestamp Converter.",
+
+  keywords: [
+    "developer tools",
+    "json formatter",
+    "jwt decoder",
+    "base64 encoder",
+    "url encoder",
+    "uuid generator",
+    "unix timestamp converter",
+    "developer api toolbox",
+  ],
+
+  authors: [
+    {
+      name: "Deepak Kumar",
+    },
+  ],
+
+  creator: "Deepak Kumar",
+  openGraph: {
   title: siteConfig.name,
-  description: siteConfig.description,
+
+  description:
+    "Free online developer tools including JSON Formatter, JWT Decoder, Base64 Encoder, URL Encoder, UUID Generator, and Unix Timestamp Converter.",
+
+  url: "https://example.com",
+
+  siteName: siteConfig.name,
+
+  locale: "en_US",
+
+  type: "website",
+},
+twitter: {
+  card: "summary_large_image",
+  title: siteConfig.name,
+  description:
+    "Free online developer tools including JSON Formatter, JWT Decoder, Base64 Encoder, URL Encoder, UUID Generator, and Unix Timestamp Converter.",
+  creator: "@deekumar_d22",
+},
 };
 
 interface RootLayoutProps {
