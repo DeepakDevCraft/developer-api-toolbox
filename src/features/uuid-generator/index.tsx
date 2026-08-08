@@ -33,7 +33,9 @@ export default function UuidGeneratorPage() {
             },
             {
               label: "Copy",
-              onClick: copy,
+              onClick: () => {
+  void copy();
+},
               disabled: !uuid,
             },
             {
