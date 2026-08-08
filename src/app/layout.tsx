@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://buildafterwrk.com"),
 
   title: {
     default: siteConfig.name,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   description:
     "Free online developer tools including JSON Formatter, JWT Decoder, Base64 Encoder, URL Encoder, UUID Generator, and Unix Timestamp Converter.",
 
-  url: "https://example.com",
+  url: "https://buildafterwrk.com",
 
   siteName: siteConfig.name,
 
